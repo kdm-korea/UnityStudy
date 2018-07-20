@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class PlayerAnim
@@ -25,7 +26,10 @@ public class PlayerCtrl : MonoBehaviour {
     public PlayerCtrl playerCtrl;
     [HideInInspector] public Animation anim;
 
+    public Image image;
+
     void Start () {
+        Cursor.lockState = CursorLockMode.Locked; //마우스 포인터 제거
         tr = GetComponent<Transform>();
         anim = GetComponent<Animation>();
         //Animation 컴포넌트의 애니메이션 클립을 지정하고 실행
